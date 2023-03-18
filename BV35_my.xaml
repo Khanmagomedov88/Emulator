@@ -1,0 +1,78 @@
+﻿<Page x:Class="Emulator.BV35_my"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Emulator"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="BV35_my">
+
+    <Grid Background="White" Margin="-2,-2,2,2">
+
+        <Rectangle Fill="#a3a195" x:Name="Rect1_1" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Width="388" Height="237" Margin="95,68,0,0"/>
+        <Rectangle Fill="#2e2e2e" x:Name="Rect2_1" HorizontalAlignment="Left" Margin="106,125,0,0" Stroke="Black" VerticalAlignment="Top" Width="366" Height="132"/>
+
+
+
+
+        <Label x:Name="Lab16" Foreground="#c4c4c4" Content="ВС" HorizontalAlignment="Left" Margin="217,242,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="33" Height="31">
+            <Label.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="Lab17" Foreground="#c4c4c4" Content="РСТ1" HorizontalAlignment="Left" Margin="202,228,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30">
+            <Label.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="Lab18"  Foreground="#c4c4c4" Content="РСТ2" HorizontalAlignment="Left" Margin="202,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30">
+            <Label.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Label.RenderTransform>
+        </Label>
+        <Label  x:Name="Lab19" Foreground="#c4c4c4" Content="ПРМ" HorizontalAlignment="Left" Margin="216,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="37" Height="31">
+            <Label.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Label.RenderTransform>
+        </Label>
+
+        <Button x:Name="Sh1" HorizontalAlignment="Left" Height="20" Width="20" Margin="115,133,0,0" 
+                 VerticalAlignment="Top" Click="Click_Per" />
+
+        <Button x:Name="Sh2" HorizontalAlignment="Left" Height="20" Width="20" Margin="444,227,0,0" 
+                 VerticalAlignment="Top" />
+        <Button x:Name="Sh3" HorizontalAlignment="Left" Height="20" Width="20" Margin="115,227,0,0" 
+                 VerticalAlignment="Top" />
+        <Button x:Name="Sh4" HorizontalAlignment="Left" Height="20" Width="20" Margin="444,133,0,0" 
+                 VerticalAlignment="Top" />
+
+        <Button x:Name="TumblerR" Width="97" Height="87" HorizontalAlignment="Left" Cursor="Hand"
+                VerticalAlignment="Top" Margin="226,150,0,0" Click="Click_Per"
+                BorderBrush="#2e2e2e" Background="{x:Null}" BorderThickness="0" >
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Image x:Name="ImageTumbler" Source="Resources\Переключатель125.png" Height="77" Width="78">
+
+            </Image>
+        </Button>
+
+    </Grid>
+</Page>

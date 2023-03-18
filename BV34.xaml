@@ -1,0 +1,25 @@
+﻿<Page x:Class="Emulator.BV34"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Emulator"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="БВ-34 ( Командира машины )">
+
+    <Grid Background="AliceBlue">
+        <Image HorizontalAlignment="Left" Source="Resources\BV34.png" Height="310" Margin="611,10,-91,0" VerticalAlignment="Top" Width="280"/>
+
+        <TextBlock FontSize="28"  Margin="10,10,252,377.6" FontWeight="Bold" >Прибор БВ-34 ( Командира машины )</TextBlock>
+        <TextBlock FontSize="16" TextWrapping="WrapWithOverflow" Margin="10,60,286,-72.4">
+            Прибор БВ-34 является основным комутационным блоком. 
+            К блоку подключаются две радиостанции, радиоприемник, питание от бортовой сети.
+            Прибор БВ-34 - это абонентский блок коммандира ( радиста )
+            Для обеспечения необходимых видов внутренней и внешней связи на блоке имеется переключатель
+            вида работ, а к блоку подключен нагрудный переключатель командира ( радиста )
+
+        </TextBlock>
+
+    </Grid>
+</Page>

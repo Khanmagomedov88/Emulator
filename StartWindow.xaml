@@ -1,0 +1,21 @@
+﻿<Window x:Class="Emulator.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Emulator"
+        mc:Ignorable="d"
+        Title="Военный учебный центр при СКФУ" Height="450" Width="680.275" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Resources/IconEmul.png">
+    <Grid Background="#C0C0C0">
+        
+
+        <Button Content="Запуск эмулятора" Background="DarkSeaGreen" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="135" Height="30" Cursor="Hand" Click="Button_StartEmulator"/>
+        <Button Content="Информация" Background="CadetBlue" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="135" Height="30" Cursor="Hand" Click="Button_Information"/>
+        <Button Content="Настройки" Background="CadetBlue" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="135" Height="30" Cursor="Hand" Click="Button_Setting"/>
+        <Button Content="" Background="CadetBlue" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="135" Height="30" Cursor="Hand"/>
+        <Button Content="Выход" Background="CadetBlue" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Width="135" Height="30" Click="Button_Exit" Cursor="Hand"/>
+        <Image HorizontalAlignment="Left" Source="Resources/Герб ВУЦ.png" Height="283" Margin="299,47,-0.4,0" VerticalAlignment="Top" Width="375"/>
+
+
+    </Grid>
+</Window>

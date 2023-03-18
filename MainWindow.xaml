@@ -1,0 +1,463 @@
+﻿<Window x:Class="Emulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Emulator"
+        mc:Ignorable="d"
+        Title="Эмулятор радиостанции Р-174" Height="615" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" ResizeMode="NoResize" Icon="Resources/IconEmul.png" Topmost="True"
+        xmlns:gif = "https://github.com/XamlAnimatedGif/XamlAnimatedGif"
+        >
+    <Window.Resources>
+        <Style  x:Key="myBtnStyle" TargetType="Button">
+            <Setter Property="Width" Value="{Binding Width}"></Setter>
+            <Setter Property="Height" Value="{Binding Height}"></Setter>
+
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#9e9e9e" ShadowDepth="0" BlurRadius="10">
+
+                    </DropShadowEffect>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse x:Name="myele">
+                                <Ellipse.Fill>
+                                    <RadialGradientBrush Center="0.5, 0.5" RadiusX="0.5" RadiusY="0.5"
+                                                         GradientOrigin="0.6, 0.3">
+                                        <GradientStop Color="White" Offset="-1"></GradientStop>
+                                        <GradientStop Color="Black" Offset="0.8"></GradientStop>
+                                    </RadialGradientBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Fill" TargetName="myele">
+                                    <Setter.Value>
+                                        <RadialGradientBrush Center="0.5, 0.5" RadiusX="0.5" RadiusY="0.5"
+                                                         GradientOrigin="0.6, 0.3">
+                                            <GradientStop Color="White" Offset="-0.5"></GradientStop>
+                                            <GradientStop Color="Black" Offset="0.8"></GradientStop>
+                                        </RadialGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#748bfc" ShadowDepth="0" BlurRadius="10"></DropShadowEffect>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style  x:Key="myGv" TargetType="Button">
+            <Setter Property="Width" Value="{Binding Width}"></Setter>
+            <Setter Property="Height" Value="{Binding Height}"></Setter>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" ShadowDepth="0.5" BlurRadius="5">
+
+                    </DropShadowEffect>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse x:Name="myele">
+                                <Ellipse.Fill>
+                                    <RadialGradientBrush Center="0.5, 0.5" RadiusX="0.5" RadiusY="0.5"
+                                                         GradientOrigin="0.3, 0.5">
+                                        <GradientStop Color="White" Offset="-1.5"></GradientStop>
+                                        <GradientStop Color="#616161" Offset="0.8"></GradientStop>
+                                    </RadialGradientBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style  x:Key="myGv2" TargetType="Button">
+            <Setter Property="Width" Value="{Binding Width}"></Setter>
+            <Setter Property="Height" Value="{Binding Height}"></Setter>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" ShadowDepth="0.5" BlurRadius="5">
+
+                    </DropShadowEffect>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse x:Name="myele">
+                                <Ellipse.Fill>
+                                    <RadialGradientBrush Center="0.5, 0.5" RadiusX="0.5" RadiusY="0.5"
+                                                         GradientOrigin="0.3, 0.5">
+                                        <GradientStop Color="White" Offset="-2"></GradientStop>
+                                        <GradientStop Color="#3d3d3d" Offset="0.8"></GradientStop>
+                                    </RadialGradientBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid RenderTransformOrigin="0.532,0.572"  Background="#f5f5f5">
+
+        <Rectangle Fill="#a3a195" x:Name="Rect1" HorizontalAlignment="Left" Margin="392,25,0,0" Stroke="Black" VerticalAlignment="Top" Width="560" Height="400" Grid.RowSpan="3"/>
+
+
+        <Rectangle Fill="#2e2e2e" x:Name="Rect2" HorizontalAlignment="Left" Margin="445,60,0,0" Stroke="Black" VerticalAlignment="Top" Width="454" Height="152" Grid.RowSpan="3"/>
+        <Rectangle Fill="#9c9a91" x:Name="Rect3" HorizontalAlignment="Left" Margin="777,344,0,0" Stroke="Black" VerticalAlignment="Top" Width="110" Height="50"/>
+        <Label Foreground="#ededed" x:Name="Lab1" FontSize="16" Content="2А" HorizontalAlignment="Left" Margin="818,353,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30" FontWeight="Bold"/>
+
+
+
+
+        <Button Name='btnEx' Width="35" Height="35" HorizontalAlignment="Left"
+                VerticalAlignment="Top" Margin="580,124,0,0" Foreground="White"
+                Style="{StaticResource myBtnStyle}" Cursor="Hand" Click="Click_Call" />
+
+        <Button Name='But_Com' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Kom"
+                VerticalAlignment="Top" Margin="100,22,0,0" Foreground="White" Grid.RowSpan="3" >
+            <Image x:Name="Image_Com" Source="Resources\gif\Khfirst.png" Height="161" Width="190"></Image>
+        </Button>
+        <Button Visibility="Hidden" Name='But_ComGifN' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Kom"
+                VerticalAlignment="Top" Margin="100,22,0,0" Foreground="White" Grid.RowSpan="3" >
+            <MediaElement x:Name="Image_ComGifN" Source="Resources\gif\ХанмагомедовН.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+        </Button>
+        <Button Visibility="Hidden" Name='But_ComGifS' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Kom"
+                VerticalAlignment="Top" Margin="100,22,0,0" Foreground="White" Grid.RowSpan="3" >
+            <MediaElement Volume="0" x:Name="Image_ComGifS" Source="Resources\gif\ХанмагомедовС.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+        </Button>
+        <Button Visibility="Hidden" Name='But_ComR' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Kom"
+                VerticalAlignment="Top" Margin="100,22,0,0" Foreground="White" Grid.RowSpan="3" >
+            <Image x:Name="Image_ComR" Source="Resources\Komandir.png" Height="161" Width="190"></Image>
+        </Button>
+
+
+        <Button Name='But_Meh' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Mech"
+                VerticalAlignment="Top" Margin="100,388,0,0" Foreground="White" Grid.Row="2" >
+            <Image x:Name="Image_Meh" Source="Resources\gif\Dfirst.png " Height="161" Width="190"></Image>
+        </Button>
+        <Button Visibility="Hidden" Name='But_MechGifN' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
+                VerticalAlignment="Top" Margin="100,388,0,0" Foreground="White"  >
+            <MediaElement x:Name="Image_MechGifN" Source="Resources/gif/ДанилинН.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+        </Button>
+        <Button Visibility="Hidden" Name='But_MechGifS' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
+                VerticalAlignment="Top" Margin="100,388,0,0" Foreground="White"  >
+            <MediaElement x:Name="Image_MechGifS" Source="Resources/gif/ДанилинС.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+        </Button>
+        <Button Visibility="Hidden" Name='But_MehR' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Mech"
+                VerticalAlignment="Top" Margin="100,388,0,0" Foreground="White" Grid.Row="2" >
+            <Image x:Name="Image_MehR" Source="Resources\Mehanik.png " Height="161" Width="190"></Image>
+        </Button>
+
+
+        <Button Name='But_Nav' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
+                VerticalAlignment="Top" Margin="100,206.6,0,0" Foreground="White"  >
+            <Image x:Name="Image_Nav" Source="Resources\gif\Gfirst.png" Height="161" Width="190"></Image>
+        </Button>
+        <Button Visibility="Hidden" Name='But_NavGifN' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
+                VerticalAlignment="Top" Margin="100,206.6,0,0" Foreground="White"  >
+            <MediaElement x:Name="Image_NavGifN" Source="Resources/gif/ГончаренкоН.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+        </Button>
+        <Button Visibility="Hidden" Name='But_NavGifS' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
+                VerticalAlignment="Top" Margin="100,206.6,0,0" Foreground="White"  >
+            <MediaElement x:Name="Image_NavGifS" Source="Resources/gif/ГончаренкоС.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+        </Button>
+        <Button Visibility="Hidden" Name='But_NavR' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
+                VerticalAlignment="Top" Margin="100,206.6,0,0" Foreground="White"  >
+            <Image x:Name="Image_NavR" Source="Resources\Navodchik.png" Height="161" Width="190"></Image>
+        </Button>
+
+
+        <Button x:Name="TumblerRST" Width="45" Height="70" HorizontalAlignment="Left" Cursor="Hand"
+                VerticalAlignment="Top" Margin="498,108,0,0" Click="Click_Lev"
+                BorderBrush="#2e2e2e" Background="{x:Null}" BorderThickness="0" Grid.RowSpan="3" >
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Image x:Name="ImageTumblerLev" Source="Resources\On.png"></Image>
+        </Button>
+
+        <Button x:Name="TumblerR" Width="65" Height="80" HorizontalAlignment="Left" Cursor="Hand"
+                VerticalAlignment="Top" Margin="647,108,0,0" Click="Click_Per"
+                BorderBrush="#2e2e2e" Background="{x:Null}" BorderThickness="0" Grid.RowSpan="3" >
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Image x:Name="ImageTumbler" Source="Resources\Переключатель-15.png" Height="80" Width="65"></Image>
+        </Button>
+
+        <Button x:Name="TumblerOnOff" Width="45" Height="70" HorizontalAlignment="Left" Cursor="Hand"
+                VerticalAlignment="Top" Margin="820,108,0,0" Click="Click_Prav"
+                BorderBrush="#2e2e2e" Background="{x:Null}" BorderThickness="0" Grid.RowSpan="3">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Image x:Name="ImageTumblerOnOff" Source="Resources\Off.png"></Image>
+        </Button>
+
+
+        <Button x:Name="TumblerValue" Width="70" Height="70" HorizontalAlignment="Left"
+                VerticalAlignment="Top" Margin="730,104,0,0"
+                BorderBrush="#2e2e2e" Background="{x:Null}" BorderThickness="0" Grid.RowSpan="3">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Image x:Name="ImageTumblerValue" Source="Resources\Громкость.png"></Image>
+        </Button>
+
+
+
+        <Label x:Name="Lab2" Foreground="#c4c4c4" Content="Вызов" HorizontalAlignment="Left" Margin="575,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Height="26" Width="45"/>
+        <Label x:Name="Lab3" Foreground="#c4c4c4" Content="Громкость" HorizontalAlignment="Left" Margin="732,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Height="26" Width="67" Grid.Row="2"/>
+        <Label x:Name="Lab4" Foreground="#c4c4c4" Content="Откл" HorizontalAlignment="Left" Margin="824,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Height="26" Width="38" Grid.Row="2"/>
+        <Label x:Name="Lab5" Foreground="#c4c4c4" Content="БС" HorizontalAlignment="Left" Margin="829,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Height="26" Width="24" Grid.RowSpan="2"/>
+
+        <Label x:Name="Lab6" Foreground="#c4c4c4" Content="В" HorizontalAlignment="Left" Margin="539,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="27" Height="60" Grid.RowSpan="2"/>
+        <Label x:Name="Lab7" Foreground="#c4c4c4" Content="о" HorizontalAlignment="Left" Margin="539,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="27" Height="60" Grid.RowSpan="2"/>
+        <Label x:Name="Lab8" Foreground="#c4c4c4" Content="д" HorizontalAlignment="Left" Margin="539,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="27" Height="60" Grid.RowSpan="2" Grid.Row="1"/>
+        <Label x:Name="Lab9" Foreground="#c4c4c4" Content="и" HorizontalAlignment="Left" Margin="539,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="27" Height="60" Grid.RowSpan="2" Grid.Row="1"/>
+        <Label x:Name="Lab10" Foreground="#c4c4c4" Content="т" HorizontalAlignment="Left" Margin="539,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="27" Height="60" Grid.RowSpan="2" Grid.Row="1"/>
+        <Label x:Name="Lab11" Foreground="#c4c4c4" Content="е" HorizontalAlignment="Left" Margin="539,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="27" Height="60" Grid.RowSpan="2" Grid.Row="1"/>
+        <Label x:Name="Lab12" Foreground="#c4c4c4" Content="л" HorizontalAlignment="Left" Margin="539,164.4,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="27" Height="60" Grid.RowSpan="2" Grid.Row="1"/>
+        <Label x:Name="Lab13" Foreground="#c4c4c4" Content="ь" HorizontalAlignment="Left" Margin="539,176,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="27" Height="27" Grid.Row="2"/>
+
+        <Label x:Name="Lab14" Foreground="#c4c4c4" Content="РСТ1" HorizontalAlignment="Left" Margin="502,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30" Grid.RowSpan="2"/>
+        <Label x:Name="Lab15" Foreground="#c4c4c4" Content="ВС" HorizontalAlignment="Left" Margin="506,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30" Grid.Row="2"/>
+
+
+        <Label x:Name="Lab16" Foreground="#c4c4c4" Content="ВС" HorizontalAlignment="Left" Margin="635,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="33" Height="31" Grid.RowSpan="2"/>
+        <Label x:Name="Lab17" Foreground="#c4c4c4" Content="РСТ1" HorizontalAlignment="Left" Margin="647,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30"/>
+        <Label x:Name="Lab18"  Foreground="#c4c4c4" Content="РСТ2" HorizontalAlignment="Left" Margin="677,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30"/>
+        <Label x:Name="Lab19" Foreground="#c4c4c4" Content="ПРМ" HorizontalAlignment="Left" Margin="695,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="37" Height="31" Grid.RowSpan="2"/>
+
+        <Button x:Name="Sh1" HorizontalAlignment="Left" Height="18" Width="18" Margin="785,360,0,0"  
+                 VerticalAlignment="Top" Style="{StaticResource myGv}"/>
+
+        <Button x:Name="Sh2" HorizontalAlignment="Left" Height="18" Width="18" Margin="860,360,0,0" 
+                 VerticalAlignment="Top" Style="{StaticResource myGv}" />
+
+        <Button x:Name="Sh3" HorizontalAlignment="Left" Height="20" Width="20" Margin="920,226.6,0,0" 
+                 VerticalAlignment="Top" Style="{StaticResource myGv}" Grid.Row="2" />
+
+        <Button x:Name="Sh4" HorizontalAlignment="Left" Height="20" Width="20" Margin="405,226.6,0,0" 
+                 VerticalAlignment="Top" Style="{StaticResource myGv}" Grid.Row="2" />
+
+        <Button Click="Click_By" x:Name="Sh5" HorizontalAlignment="Left" Height="20" Width="20" Margin="920,38,0,0" 
+                 VerticalAlignment="Top" Style="{StaticResource myGv}" />
+
+        <Button Click="Click_By" x:Name="Sh6" HorizontalAlignment="Left" Height="20" Width="20" Margin="405,38,0,0" 
+                 VerticalAlignment="Top" Style="{StaticResource myGv}" />
+
+        <Button x:Name="Sh7" HorizontalAlignment="Left" Height="17" Width="17" Margin="455,68,0,0" 
+                 VerticalAlignment="Top" Style="{StaticResource myGv2}" />
+
+        <Button x:Name="Sh8" HorizontalAlignment="Left" Height="17" Width="17" Margin="870,68,0,0" 
+                 VerticalAlignment="Top" Style="{StaticResource myGv2}" />
+        <Label Content="Командир" FontSize="15" HorizontalAlignment="Left" Margin="156,170,0,0" VerticalAlignment="Top" Height="30" Width="80" Grid.Row="2"/>
+        <Label Content="Механик" FontSize="15" HorizontalAlignment="Left" Margin="156,533,0,0" VerticalAlignment="Top" Height="30" Width="70" Grid.Row="2"/>
+        <Label Content="Наводчик" FontSize="15" HorizontalAlignment="Left" Margin="148,356,0,0" VerticalAlignment="Top" Height="31" Width="78" Grid.Row="2"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="88" Margin="392,430,0,0" Stroke="Black" VerticalAlignment="Top" Width="560"/>
+        <TextBlock x:Name="Help_Inf" Width="550" Height="70"  HorizontalAlignment="Left" Margin="396,454,0,0" FontSize="13" VerticalAlignment="Top" RenderTransformOrigin="0.558,0.566"/>
+
+        <Label x:Name="Podsk" Content="Подсказка" FontSize="12" HorizontalAlignment="Left" Margin="417,430,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="392,432,0,0" Source="Resources\ЗначокInfo.png" VerticalAlignment="Top" Width="25"/>
+        <Button x:Name="But_Dalee" HorizontalAlignment="Left" Margin="923,430,0,0" VerticalAlignment="Top" Width="29" Height="88" Cursor="Hand" Click="But_Dalee_Click">
+            <Image Source="Resources\Далее.png"></Image>
+        </Button>
+        <Rectangle x:Name="IndCom" Fill="Black" HorizontalAlignment="Left" Height="150" Margin="90,22,0,0" Stroke="Black" VerticalAlignment="Top" Width="12" Grid.RowSpan="3"/>
+        <Rectangle x:Name="IndMech" Fill="Black" HorizontalAlignment="Left" Height="150" Margin="90,388.6,0,0" Stroke="Black" VerticalAlignment="Top" Width="12" Grid.Row="2"/>
+        <Rectangle x:Name="IndNav" Fill="Black" HorizontalAlignment="Left" Height="150" Margin="90,206,0,0" Stroke="Black" VerticalAlignment="Top" Width="12" Grid.Row="2"/>
+        <Button x:Name="bvNext" Content="БВ35" HorizontalAlignment="Left" Margin="877,525,0,0"  VerticalAlignment="Top" Width="75"/>
+
+        <Rectangle x:Name="RectSost" Fill="Black" HorizontalAlignment="Left" Height="12" Margin="392,527,0,0" Stroke="Black" VerticalAlignment="Top" Width="12"/>
+        <Label x:Name="Sost" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="406,520,0,0"/>
+
+        <Rectangle Visibility="Hidden" x:Name="RectSost2" Fill="Black" HorizontalAlignment="Left" Height="12" Margin="392,547,0,0" Stroke="Black" VerticalAlignment="Top" Width="12"/>
+        <Label x:Name="Sost2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="406,540,0,0"/>
+
+
+        <Rectangle Visibility="Collapsed" Fill="#a3a195" x:Name="Rect1_1" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Width="388" Height="237" Margin="439,88,0,0"/>
+        <Rectangle Visibility="Collapsed" Fill="#2e2e2e" x:Name="Rect2_1" HorizontalAlignment="Left" Margin="450,148,0,0" Stroke="Black" VerticalAlignment="Top" Width="366" Height="132"/>
+
+
+
+
+        <Label Visibility="Collapsed" x:Name="Lab1_1" Foreground="#c4c4c4" Content="ВС" HorizontalAlignment="Left" Margin="588,265,0,0" VerticalAlignment="Top" 
+               RenderTransformOrigin="-0.057,0.043" Width="33" Height="31" >
+            <Label.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Label.RenderTransform>
+        </Label>
+        <Label Visibility="Collapsed" x:Name="Lab2_1" Foreground="#c4c4c4" Content="РСТ1" HorizontalAlignment="Left" Margin="573,251,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30">
+            <Label.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Label.RenderTransform>
+        </Label>
+        <Label Visibility="Collapsed" x:Name="Lab3_1"  Foreground="#c4c4c4" Content="РСТ2" HorizontalAlignment="Left" Margin="573,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30">
+            <Label.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Label.RenderTransform>
+        </Label>
+        <Label Visibility="Collapsed"  x:Name="Lab4_1" Foreground="#c4c4c4" Content="ПРМ" HorizontalAlignment="Left" Margin="587,193,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="37" Height="31">
+            <Label.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Label.RenderTransform>
+        </Label>
+
+        <Button Visibility="Collapsed" x:Name="Sh1_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="464,156,0,0" 
+                 VerticalAlignment="Top" Style="{StaticResource myGv2}" />
+
+        <Button Visibility="Collapsed" x:Name="Sh2_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="785,250,0,0" 
+                 VerticalAlignment="Top"  Style="{StaticResource myGv2}"/>
+        <Button Visibility="Collapsed" x:Name="Sh3_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="464,250,0,0" 
+                 VerticalAlignment="Top" RenderTransformOrigin="0.47,0.52" Style="{StaticResource myGv2}" />
+        <Button Visibility="Collapsed" x:Name="Sh4_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="785,156,0,0" 
+                 VerticalAlignment="Top"  Style="{StaticResource myGv2}"/>
+
+        <Button Visibility="Collapsed" x:Name="TumblerR_1" Width="97" Height="87" HorizontalAlignment="Left" Cursor="Hand"
+                VerticalAlignment="Top" Margin="594,171,0,0" Click="Click_Per2"
+                BorderBrush="#2e2e2e" Background="{x:Null}" BorderThickness="0" >
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Image x:Name="ImageTumbler_1" Source="Resources\Переключатель125.png" Height="77" Width="78">
+
+            </Image>
+        </Button>
+        <Button x:Name="MT2_Kom" Visibility="Collapsed" Cursor="Hand" Content="Подключить МТ2" Click="Ckick_MT2_Kom" HorizontalAlignment="Left" Margin="62,172,0,0" VerticalAlignment="Top" Width="150" Height="28">
+            <Button.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Button.RenderTransform>
+        </Button>
+
+        <Button x:Name="MT2_Nav" Visibility="Collapsed"  Cursor="Hand" Content="Подключить МТ2" Click="Ckick_MT2_Nav" HorizontalAlignment="Left" Margin="62,356,0,0" VerticalAlignment="Top" Width="150" Height="28">
+            <Button.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Button.RenderTransform>
+        </Button>
+
+        <Button x:Name="MT2_Mech" Visibility="Collapsed"  Cursor="Hand" Content="Подключить МТ2" Click="Ckick_MT2_Mech" HorizontalAlignment="Left" Margin="62,539,0,0" VerticalAlignment="Top" Width="150" Height="28">
+            <Button.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Button.RenderTransform>
+        </Button>
+            
+        <Label x:Name="Khanm" Content="By Khanmagomedov" Visibility="Hidden" HorizontalAlignment="Left" FontSize="16" Margin="8,356,0,0" VerticalAlignment="Top">
+            <Label.RenderTransform>
+                <RotateTransform Angle="-90" />
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="chetchik" Content="Label" HorizontalAlignment="Left" Margin="326,200,0,0" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Window>

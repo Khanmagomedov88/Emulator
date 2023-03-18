@@ -1,0 +1,18 @@
+﻿<Window x:Class="Emulator.Information"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Emulator"
+        mc:Ignorable="d"
+        Title="Военный учебный центр при СКФУ" Height="600" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="Grid_Info">
+        <Frame x:Name="Grid_Information" Margin="115,0,-0.4,0.4"> </Frame>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,528,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_ClickExit"/>
+        <Button Content="БВ-34" x:Name="bv34" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_BV34"/>
+        <Button Content="БВ-35" x:Name="bv35" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_BV35"/>
+        <Button Content="БВ-37" x:Name="bv37" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_BV37"/>
+        <Button Content="Главная" x:Name="Glav" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_Glav"/>
+
+    </Grid>
+</Window>
