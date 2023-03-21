@@ -9,8 +9,9 @@
       Title="БВ-35 ( Наводчика )">
 
     <Grid Background="AliceBlue">
-        <Image HorizontalAlignment="Left" Height="258" Margin="520,33,-57,0" VerticalAlignment="Top" Width="337" Source="Resources/BV35.png"/>
-        <TextBlock FontSize="28"  Margin="10,10,252,377.6" FontWeight="Bold" >Прибор БВ-35 ( Наводчика )</TextBlock>
+        <Image HorizontalAlignment="Left" Height="258" Margin="514,140,-51,0" VerticalAlignment="Top" Width="337" Source="Resources/BV35.png"/>
+        <Rectangle Fill="CadetBlue" HorizontalAlignment="Left" Height="55" Stroke="Black" VerticalAlignment="Top" Width="550"/>
+        <TextBlock FontSize="28"  Margin="11,10,75,377.6" FontWeight="Bold" >Прибор БВ-35 ( Наводчика )</TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Width="540" FontSize="16" VerticalAlignment="Top">
             Прибор БВ35 предназначен для обеспечения  его абонента 
             режимами работы внешней и внутренней связи, к нему 

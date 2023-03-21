@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Emulator"
         mc:Ignorable="d"
-        Title="Военный учебный центр при СКФУ" Height="600" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Военный учебный центр при СКФУ" Height="600" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Resources/ЗначокInfo.png">
     <Grid x:Name="Grid_Info">
-        <Frame x:Name="Grid_Information" Margin="115,0,-0.4,0.4"> </Frame>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="377*"/>
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="Grid_Information" Margin="115,0,-0.4,0.4" Grid.ColumnSpan="2"></Frame>
         <Button Content="Назад" HorizontalAlignment="Left" Margin="10,528,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_ClickExit"/>
         <Button Content="БВ-34" x:Name="bv34" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_BV34"/>
         <Button Content="БВ-35" x:Name="bv35" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_BV35"/>

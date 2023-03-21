@@ -368,28 +368,28 @@
         <Rectangle Visibility="Hidden" x:Name="RectSost2" Fill="Black" HorizontalAlignment="Left" Height="12" Margin="392,547,0,0" Stroke="Black" VerticalAlignment="Top" Width="12"/>
         <Label x:Name="Sost2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="406,540,0,0"/>
 
+        <Rectangle Visibility="Collapsed" Fill="#FFF4F4F5" x:Name="Rect0_1" HorizontalAlignment="Left" Margin="392,25,0,0" Stroke="Black" VerticalAlignment="Top" Width="560" Height="400" Grid.RowSpan="3"/>
+        <Rectangle Visibility="Collapsed" Fill="#a3a195" x:Name="Rect1_1" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Width="260" Height="340" Margin="540,60,0,0"/>
+        <Rectangle Visibility="Collapsed" Fill="#2e2e2e" x:Name="Rect2_1" HorizontalAlignment="Left" Margin="580,84,0,0" Stroke="Black" VerticalAlignment="Top" Width="180" Height="290"/>
 
-        <Rectangle Visibility="Collapsed" Fill="#a3a195" x:Name="Rect1_1" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" Width="260" Height="340" Margin="500,60,0,0"/>
-        <Rectangle Visibility="Collapsed" Fill="#2e2e2e" x:Name="Rect2_1" HorizontalAlignment="Left" Margin="540,84,0,0" Stroke="Black" VerticalAlignment="Top" Width="180" Height="290"/>
+        <Label Visibility="Collapsed" x:Name="Lab1_1" Foreground="#c4c4c4" Content="ВС" HorizontalAlignment="Left" Margin="626,186,0,0" VerticalAlignment="Top"/>
+        <Label Visibility="Collapsed" x:Name="Lab2_1" Foreground="#c4c4c4" Content="РСТ1" HorizontalAlignment="Left" Margin="638,175,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30"/>
+        <Label Visibility="Collapsed" x:Name="Lab3_1"  Foreground="#c4c4c4" Content="РСТ2" HorizontalAlignment="Left" Margin="666,175,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30"/>
+        <Label Visibility="Collapsed" x:Name="Lab4_1" Foreground="#c4c4c4" Content="ПРМ" HorizontalAlignment="Left" Margin="690,186,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="37" Height="31"/>
 
-        <Label Visibility="Collapsed" x:Name="Lab1_1" Foreground="#c4c4c4" Content="ВС" HorizontalAlignment="Left" Margin="575,188,0,0" VerticalAlignment="Top"/>
-        <Label Visibility="Collapsed" x:Name="Lab2_1" Foreground="#c4c4c4" Content="РСТ1" HorizontalAlignment="Left" Margin="590,175,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30"/>
-        <Label Visibility="Collapsed" x:Name="Lab3_1"  Foreground="#c4c4c4" Content="РСТ2" HorizontalAlignment="Left" Margin="620,175,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="45" Height="30"/>
-        <Label Visibility="Collapsed" x:Name="Lab4_1" Foreground="#c4c4c4" Content="ПРМ" HorizontalAlignment="Left" Margin="645,188,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.057,0.043" Width="37" Height="31"/>
-
-        <Button Visibility="Collapsed" x:Name="Sh1_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="545,90,0,0" 
+        <Button Visibility="Collapsed" x:Name="Sh1_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="585,90,0,0" 
                  VerticalAlignment="Top" Style="{StaticResource myGv2}" />
 
-        <Button Visibility="Collapsed" x:Name="Sh2_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="694,347,0,0" 
+        <Button Visibility="Collapsed" x:Name="Sh2_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="735,347,0,0" 
                  VerticalAlignment="Top"  Style="{StaticResource myGv2}"/>
-        <Button Visibility="Collapsed" x:Name="Sh3_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="545,347,0,0" 
+        <Button Visibility="Collapsed" x:Name="Sh3_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="585,347,0,0" 
                  VerticalAlignment="Top" RenderTransformOrigin="0.47,0.52" Style="{StaticResource myGv2}" />
 
-        <Button Visibility="Collapsed" x:Name="Sh4_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="694,90,0,0" 
+        <Button Visibility="Collapsed" x:Name="Sh4_1" HorizontalAlignment="Left" Height="20" Width="20" Margin="735,90,0,0" 
                  VerticalAlignment="Top"  Style="{StaticResource myGv2}"/>
 
         <Button Visibility="Collapsed" x:Name="TumblerR_1" Width="97" Height="87" HorizontalAlignment="Left" Cursor="Hand"
-                VerticalAlignment="Top" Margin="575,200,0,0" Click="Click_Per2"
+                VerticalAlignment="Top" Margin="620,200,0,0" Click="Click_Per2"
                 BorderBrush="#2e2e2e" Background="{x:Null}" BorderThickness="0" >
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
@@ -412,13 +412,14 @@
             </Button.Style>
             <Image x:Name="ImageTumbler_1" Source="Resources\Переключатель-15.png" Height="77" Width="78"/>
         </Button>
+        
         <Button x:Name="MT2_Kom" Visibility="Collapsed" Cursor="Hand" Content="Подключить МТ2" Click="Ckick_MT2_Kom" HorizontalAlignment="Left" Margin="62,172,0,0" VerticalAlignment="Top" Width="150" Height="28">
             <Button.RenderTransform>
                 <RotateTransform Angle="-90" />
             </Button.RenderTransform>
         </Button>
 
-        <Button x:Name="MT2_Nav" Visibility="Collapsed"  Cursor="Hand" Content="Подключить МТ2" Click="Ckick_MT2_Nav" HorizontalAlignment="Left" Margin="62,356,0,0" VerticalAlignment="Top" Width="150" Height="28">
+        <Button x:Name="MT2_Nav" Visibility="Collapsed" Cursor="Hand" Content="Подключить МТ2" Click="Ckick_MT2_Nav" HorizontalAlignment="Left" Margin="62,356,0,0" VerticalAlignment="Top" Width="150" Height="28">
             <Button.RenderTransform>
                 <RotateTransform Angle="-90" />
             </Button.RenderTransform>

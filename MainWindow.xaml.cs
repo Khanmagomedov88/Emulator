@@ -938,7 +938,7 @@ namespace Emulator
         }
         public void VisNavod()
         {
-
+            Rect0_1.Visibility = Visibility.Visible;
             Rect1_1.Visibility = Visibility.Visible;
             Rect2_1.Visibility = Visibility.Visible;
             Lab1_1.Visibility = Visibility.Visible;
@@ -956,6 +956,7 @@ namespace Emulator
         }
         public void InvisNavod()
         {
+            Rect0_1.Visibility = Visibility.Collapsed;
             Rect1_1.Visibility = Visibility.Collapsed;
             Rect2_1.Visibility = Visibility.Collapsed;
 

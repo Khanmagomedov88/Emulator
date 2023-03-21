@@ -10,7 +10,8 @@
 
     <Grid Background="AliceBlue">
         <Image HorizontalAlignment="Left" Source="Resources/BV37.png" Height="290" Margin="546,87,0,0" VerticalAlignment="Top" Width="400"/>
-        <TextBlock FontSize="28"  Margin="10,10,252,539" FontWeight="Bold" >Прибор БВ-37 ( Механика водителя )</TextBlock>
+        <Rectangle Fill="CadetBlue" HorizontalAlignment="Left" Height="55" Stroke="Black" VerticalAlignment="Top" Width="610"/>
+        <TextBlock FontSize="28"  Margin="11,6,252,539" FontWeight="Bold" >Прибор БВ-37 ( Механика водителя )</TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Width="600" FontSize="16" VerticalAlignment="Top" RenderTransformOrigin="0.328,-7.199">
             Прибор БВ37 предназначен для обеспечения водителя 
             подвижного объекта внешней связью по РС1 и внутренней 

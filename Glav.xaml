@@ -10,6 +10,7 @@
 
     <Grid Background="AliceBlue" x:Name="Grid_Info" >
         <Frame x:Name="Grid_Information" Margin="0,-39,0,39"></Frame>
+        <Rectangle Fill="CadetBlue" HorizontalAlignment="Left" Height="54" Stroke="Black" VerticalAlignment="Top" Width="1000"/>
         <Button x:Name="Button_Com" Width="250" Height="250" HorizontalAlignment="Left"
                 VerticalAlignment="Top" Margin="361,86,0,0"
                 BorderBrush="#2e2e2e" Background="{x:Null}" BorderThickness="0">
@@ -85,7 +86,7 @@
             <Image x:Name="ImagePr2" Source="Resources/Прибор 2.png"></Image>
         </Button>
 
-        <Label  x:Name="V2" Content="Аппаратура внутренней связи и комутации Р-174" FontSize="26" HorizontalAlignment="Left" Margin="181,9,0,0" VerticalAlignment="Top"/>
+        <Label  x:Name="V2" Content="Аппаратура внутренней связи и комутации Р-174" FontSize="26" HorizontalAlignment="Left" Margin="175,4,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="V1" FontSize="20" Margin="10,373,136,27" TextWrapping="WrapWithOverflow">
                 Аппаратура ВСКР-174 предназначена для использования в подвижных наземных объектах и обеспечивает
             абонентам внутреннюю двустороннюю телефонную связь, включая одного абонента находящегося 

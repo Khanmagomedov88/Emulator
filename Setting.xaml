@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Emulator"
         mc:Ignorable="d"
-        Title="Настройки" Foreground="Red" Height="400" Width="600">
+        Title="Настройки" Foreground="Red" Height="400" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Resources/Setting_Ico.png">
     <Grid>
         <Rectangle Fill="CadetBlue" HorizontalAlignment="Left" Height="370" Margin="295,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="10"/>
         <Rectangle Fill="CadetBlue" HorizontalAlignment="Left" Height="30" Margin="0,0,-0.4,0" Stroke="Black" VerticalAlignment="Top" Width="594"/>
@@ -13,11 +13,7 @@
         <Label Content="Прочее" HorizontalAlignment="Left"  FontSize="15" Margin="410,0,0,0" VerticalAlignment="Top"/>
         <Label Content="Панель подключения МТ2                        Q"   FontSize="13" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top"/>
         <Label Content="Выход из эмулятора                                  Esc"   FontSize="13" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="280"/>
-        <Label Content="Переключение режимов                          Z"   FontSize="13" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" Width="280"/>
-
-
-
-
+        <Label Content="Переключение режимов                           Z"   FontSize="13" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" Width="280"/>
 
     </Grid>
 </Window>
