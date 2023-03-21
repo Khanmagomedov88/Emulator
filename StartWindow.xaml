@@ -15,7 +15,5 @@
         <Button Content="" Background="CadetBlue" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="135" Height="30" Cursor="Hand"/>
         <Button Content="Выход" Background="CadetBlue" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Width="135" Height="30" Click="Button_Exit" Cursor="Hand"/>
         <Image HorizontalAlignment="Left" Source="Resources/Герб ВУЦ.png" Height="283" Margin="299,47,-0.4,0" VerticalAlignment="Top" Width="375"/>
-
-
     </Grid>
 </Window>
