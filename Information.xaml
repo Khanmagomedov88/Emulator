@@ -11,12 +11,17 @@
             <ColumnDefinition Width="120*"/>
             <ColumnDefinition Width="377*"/>
         </Grid.ColumnDefinitions>
-        <Frame x:Name="Grid_Information" Margin="115,0,-0.4,0.4" Grid.ColumnSpan="2"></Frame>
+        <Rectangle Fill="AliceBlue" HorizontalAlignment="Left" Height="570" Stroke="Black" VerticalAlignment="Top" Width="119"/>
+        <Rectangle Fill="CadetBlue" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="119" Margin="0,0,0,0"/>
+
+        <Frame x:Name="Grid_Information" NavigationUIVisibility="Hidden" Margin="115,0,-0.4,0.4" Grid.ColumnSpan="2"></Frame>
+        <Image HorizontalAlignment="Left" Source="Resources/Герб ВУЦ.png" Height="92" Margin="0,10,0,0" VerticalAlignment="Top" Width="119"/>
+
         <Button Content="Назад" HorizontalAlignment="Left" Margin="10,528,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_ClickExit"/>
-        <Button Content="БВ-34" x:Name="bv34" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_BV34"/>
-        <Button Content="БВ-35" x:Name="bv35" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_BV35"/>
-        <Button Content="БВ-37" x:Name="bv37" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_BV37"/>
-        <Button Content="Главная" x:Name="Glav" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_Glav"/>
+        <Button Background="CadetBlue" Content="БВ-34" x:Name="bv34" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_BV34"/>
+        <Button Background="CadetBlue" Content="БВ-35" x:Name="bv35" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_BV35"/>
+        <Button Background="CadetBlue" Content="БВ-37" x:Name="bv37" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_BV37"/>
+        <Button Background="DarkSeaGreen" Content="Главная" x:Name="Glav" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Click_Glav"/>
 
     </Grid>
 </Window>
