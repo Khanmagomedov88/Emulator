@@ -563,27 +563,27 @@ namespace Emulator
         {
             if (per2 == 0)
             {
-                ImageTumbler_1.Source = new BitmapImage(new Uri("Resources/Переключатель80.png", UriKind.Relative));
+                ImageTumbler_1.Source = new BitmapImage(new Uri("Resources/Переключатель30.png", UriKind.Relative));
                 per2 = 1;
                 extr = 0;
 
             }
             else if (per2 == 1)
             {
-                ImageTumbler_1.Source = new BitmapImage(new Uri("Resources/Переключатель65.png", UriKind.Relative));
+                ImageTumbler_1.Source = new BitmapImage(new Uri("Resources/Переключатель15.png", UriKind.Relative));
                 per2 = 2;
                 extr = 0;
 
             }
             else if (per2 == 2)
             {
-                ImageTumbler_1.Source = new BitmapImage(new Uri("Resources/Переключатель125.png", UriKind.Relative));
+                ImageTumbler_1.Source = new BitmapImage(new Uri("Resources/Переключатель-15.png", UriKind.Relative));
                 extr = 0;
                 per2 = 3;
             }
             else if (per2 == 3)
             {
-                ImageTumbler_1.Source = new BitmapImage(new Uri("Resources/Переключатель110.png", UriKind.Relative));
+                ImageTumbler_1.Source = new BitmapImage(new Uri("Resources/Переключатель-30.png", UriKind.Relative));
                 extr = 0;
                 per2 = 0;
             }
