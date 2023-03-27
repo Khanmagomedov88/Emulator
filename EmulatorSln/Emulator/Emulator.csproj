@@ -75,6 +75,7 @@
     <Compile Include="Glav.xaml.cs">
       <DependentUpon>Glav.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\RelativeToAbsolutePathConverter.cs" />
     <Compile Include="Information.xaml.cs">
       <DependentUpon>Information.xaml</DependentUpon>
     </Compile>
@@ -192,7 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Rec.wav" />
-    <None Include="Resources\18557_1464791429.wav" />
+    <Content Include="Resources\18557_1464791429.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\IconEmul.png" />
