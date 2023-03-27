@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31624.102
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emulator", "Emulator.csproj", "{4DCF4FC5-7432-4D5B-8250-0CA9128189E0}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{22035C05-95B3-48C9-BC78-9E19E42C928B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emulator", "Emulator\Emulator.csproj", "{4DCF4FC5-7432-4D5B-8250-0CA9128189E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,13 +15,11 @@ Global
 		{4DCF4FC5-7432-4D5B-8250-0CA9128189E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DCF4FC5-7432-4D5B-8250-0CA9128189E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DCF4FC5-7432-4D5B-8250-0CA9128189E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{22035C05-95B3-48C9-BC78-9E19E42C928B}.Debug|Any CPU.ActiveCfg = Debug
-		{22035C05-95B3-48C9-BC78-9E19E42C928B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B312D8EF-C9D9-4120-A2C4-E06B274E8D2C}
+		SolutionGuid = {D30F22A9-914F-4329-868E-3C293CD19A74}
 	EndGlobalSection
 EndGlobal
