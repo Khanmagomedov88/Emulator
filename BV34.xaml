@@ -10,7 +10,7 @@
 
     <Grid Background="AliceBlue">
         <Image HorizontalAlignment="Left" Source="Resources/BV34.png" Height="310" Margin="545,130,-25,0" VerticalAlignment="Top" Width="280"/>
-        <Rectangle Fill="CadetBlue" HorizontalAlignment="Left" Height="55" Stroke="CadetBlue" VerticalAlignment="Top" Width="567" Margin="-19,0,0,0"/>
+        <Rectangle Fill="CadetBlue" HorizontalAlignment="Left" Height="55" Stroke="CadetBlue" VerticalAlignment="Top" Width="568" Margin="-20,0,0,0"/>
 
         <TextBlock FontSize="28"  Margin="10,10,252,377.6" FontWeight="Bold" >Прибор БВ-34 ( Командира машины )</TextBlock>
         <TextBlock FontSize="16" TextWrapping="WrapWithOverflow" Margin="10,60,286,-72.4">

@@ -189,7 +189,7 @@
         </Button>
         <Button Visibility="Hidden" Name='But_NavGifS' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
                 VerticalAlignment="Top" Margin="100,206.6,0,0" Foreground="White"  >
-            <MediaElement x:Name="Image_NavGifS" Source="Resources/gif/ГончаренкоС.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+            <MediaElement x:Name="Image_NavGifS" Source="{Binding Source=Resources/gif/ГончаренкоС.mp4}" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
         </Button>
         <Button Visibility="Hidden" Name='But_NavR' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
                 VerticalAlignment="Top" Margin="100,206.6,0,0" Foreground="White"  >
@@ -430,13 +430,12 @@
                 <RotateTransform Angle="-90" />
             </Button.RenderTransform>
         </Button>
-            
+
         <Label x:Name="Khanm" Content="By Khanmagomedov" Visibility="Hidden" HorizontalAlignment="Left" FontSize="16" Margin="8,356,0,0" VerticalAlignment="Top">
             <Label.RenderTransform>
                 <RotateTransform Angle="-90" />
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="chetchik" Content="Label" HorizontalAlignment="Left" Margin="326,200,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>

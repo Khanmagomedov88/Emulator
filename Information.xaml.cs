@@ -23,7 +23,7 @@ namespace Emulator
         {
             InitializeComponent();
             Grid_Information.Content = new Glav();
-            
+
         }
 
         private void Click_BV34(object sender, RoutedEventArgs e)

@@ -10,7 +10,7 @@
 
     <Grid Background="AliceBlue">
         <Image HorizontalAlignment="Left" Source="Resources/BV37.png" Height="290" Margin="546,87,0,0" VerticalAlignment="Top" Width="400"/>
-        <Rectangle Fill="CadetBlue" HorizontalAlignment="Left" Height="55" Stroke="CadetBlue" VerticalAlignment="Top" Width="632" Margin="-22,0,0,0"/>
+        <Rectangle Fill="CadetBlue" HorizontalAlignment="Left" Height="55" Stroke="CadetBlue" VerticalAlignment="Top" Width="627" Margin="-17,0,0,0"/>
         <TextBlock FontSize="28"  Margin="11,10,252,539" FontWeight="Bold" >Прибор БВ-37 ( Механика водителя )</TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Width="600" FontSize="16" VerticalAlignment="Top" RenderTransformOrigin="0.328,-7.199">
             Прибор БВ37 предназначен для обеспечения водителя 

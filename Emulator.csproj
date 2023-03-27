@@ -116,6 +116,7 @@
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -124,6 +125,7 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Page Include="Setting.xaml">
       <SubType>Designer</SubType>
@@ -214,9 +216,9 @@
     <Resource Include="Resources\gif\Gsecond.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\gif\ХанмагомедовН.mp4">
+    <Content Include="Resources\gif\ХанмагомедовН.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gif\ХанмагомедовС.mp4">
