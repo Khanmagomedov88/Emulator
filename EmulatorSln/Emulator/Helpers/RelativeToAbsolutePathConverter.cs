@@ -14,7 +14,8 @@ namespace Helpers
             string name = (string)value;
             if (string.IsNullOrWhiteSpace(name))
                 return null;
-            return File.ReadAllBytes(Path.Combine(BaseFolder, name));
+            //return File.ReadAllBytes(Path.Combine(BaseFolder, name));
+            return Path.Combine(BaseFolder, name);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
