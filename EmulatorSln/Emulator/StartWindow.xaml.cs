@@ -47,5 +47,11 @@ namespace Emulator
             set.Show();
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Testing tst = new Testing();
+            tst.Show();
+        }
     }
 }

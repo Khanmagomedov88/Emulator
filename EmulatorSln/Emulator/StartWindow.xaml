@@ -12,7 +12,7 @@
         <Button Content="Запуск эмулятора" Background="DarkSeaGreen" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="135" Height="30" Cursor="Hand" Click="Button_StartEmulator"/>
         <Button Content="Информация" Background="CadetBlue" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="135" Height="30" Cursor="Hand" Click="Button_Information"/>
         <Button Content="Настройки" Background="CadetBlue" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="135" Height="30" Cursor="Hand" Click="Button_Setting"/>
-        <Button Content="" Background="CadetBlue" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="135" Height="30" Cursor="Hand"/>
+        <Button Content="ТЕСТИРОВАНИЕ" Background="Red"  HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="135" Height="30" Cursor="Hand" Click="Button_Click"/>
         <Button Content="Выход" Background="CadetBlue" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Width="135" Height="30" Click="Button_Exit" Cursor="Hand"/>
         <Image HorizontalAlignment="Left" Source="Resources/Герб ВУЦ.png" Height="283" Margin="299,47,-0.4,0" VerticalAlignment="Top" Width="375"/>
     </Grid>

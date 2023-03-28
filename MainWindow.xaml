@@ -4,10 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Emulator"
-        xmlns:hlp="clr-namespace:Helpers"
         mc:Ignorable="d"
-        Title="Эмулятор радиостанции Р-174" Height="615" Width="1000"
-        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" ResizeMode="NoResize" Icon="Resources/IconEmul.png" Topmost="True"
+        Title="Эмулятор радиостанции Р-174" Height="615" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" ResizeMode="NoResize" Icon="Resources/IconEmul.png" Topmost="True"
         xmlns:gif = "https://github.com/XamlAnimatedGif/XamlAnimatedGif"
         >
     <Window.Resources>
@@ -151,11 +149,11 @@
         </Button>
         <Button Visibility="Hidden" Name='But_ComGifN' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Kom"
                 VerticalAlignment="Top" Margin="100,22,0,0" Foreground="White" Grid.RowSpan="3" >
-            <MediaElement x:Name="Image_ComGifN" Source="{Binding Source=Resources/gif/ХанмагомедовН.mp4}"  LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+            <MediaElement x:Name="Image_ComGifN" Source="Resources\gif\ХанмагомедовН.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
         </Button>
         <Button Visibility="Hidden" Name='But_ComGifS' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Kom"
                 VerticalAlignment="Top" Margin="100,22,0,0" Foreground="White" Grid.RowSpan="3" >
-            <MediaElement Volume="0" x:Name="Image_ComGifS" Source="{Binding Source=Resources/gif/ХанмагомедовС.mp4}" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+            <MediaElement Volume="0" x:Name="Image_ComGifS" Source="Resources\gif\ХанмагомедовС.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
         </Button>
         <Button Visibility="Hidden" Name='But_ComR' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Kom"
                 VerticalAlignment="Top" Margin="100,22,0,0" Foreground="White" Grid.RowSpan="3" >
@@ -169,11 +167,11 @@
         </Button>
         <Button Visibility="Hidden" Name='But_MechGifN' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
                 VerticalAlignment="Top" Margin="100,388,0,0" Foreground="White"  >
-            <MediaElement x:Name="Image_MechGifN" Source="{Binding Source=Resources/gif/ДанилинН.mp4}" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+            <MediaElement x:Name="Image_MechGifN" Source="Resources/gif/ДанилинН.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
         </Button>
         <Button Visibility="Hidden" Name='But_MechGifS' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
                 VerticalAlignment="Top" Margin="100,388,0,0" Foreground="White"  >
-            <MediaElement x:Name="Image_MechGifS" Source="{Binding Source=Resources/gif/ДанилинС.mp4}" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+            <MediaElement x:Name="Image_MechGifS" Source="Resources/gif/ДанилинС.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
         </Button>
         <Button Visibility="Hidden" Name='But_MehR' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Mech"
                 VerticalAlignment="Top" Margin="100,388,0,0" Foreground="White" Grid.Row="2" >
@@ -187,7 +185,7 @@
         </Button>
         <Button Visibility="Hidden" Name='But_NavGifN' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
                 VerticalAlignment="Top" Margin="100,206.6,0,0" Foreground="White"  >
-            <MediaElement x:Name="Image_NavGifN" Source="{Binding Source=Resources/gif/ГончаренкоН.mp4, Converter={hlp:RelativeToAbsolutePath}}" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
+            <MediaElement x:Name="Image_NavGifN" Source="Resources/gif/ГончаренкоН.mp4" LoadedBehavior="Manual" UnloadedBehavior="Manual" Height="161" Width="190"></MediaElement>
         </Button>
         <Button Visibility="Hidden" Name='But_NavGifS' Width="190" Height="150" Cursor="Hand" HorizontalAlignment="Left" Click="Click_Nav"
                 VerticalAlignment="Top" Margin="100,206.6,0,0" Foreground="White"  >
@@ -197,7 +195,6 @@
                 VerticalAlignment="Top" Margin="100,206.6,0,0" Foreground="White"  >
             <Image x:Name="Image_NavR" Source="Resources\Navodchik.png" Height="161" Width="190"></Image>
         </Button>
-
 
         <Button x:Name="TumblerRST" Width="45" Height="70" HorizontalAlignment="Left" Cursor="Hand"
                 VerticalAlignment="Top" Margin="498,108,0,0" Click="Click_Lev"
